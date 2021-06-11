@@ -1,6 +1,7 @@
 
 import { Container, createMuiTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
+import FeaturedPost from './components/FeaturedPost';
 import Header from './components/Header';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   <ThemeProvider theme={darkTheme}>
        <Container >
            <Header />
+           <FeaturedPost />
        </Container>
   </ThemeProvider>
  
