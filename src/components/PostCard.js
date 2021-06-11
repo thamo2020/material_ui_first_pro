@@ -1,9 +1,19 @@
-import { makeStyles, Typography } from '@material-ui/core'
+import { CardMedia, makeStyles, Typography } from '@material-ui/core'
+import { Hidden } from '@material-ui/core';
 import { Card, CardActionArea, Grid } from '@material-ui/core'
 import React from 'react'
 
-const useStyles = makeStyles({});
-
+const useStyles = makeStyles({
+    card:{
+        display:"flex", // two cards display in one line
+    },
+    cardDetails:{
+        flex:1,
+    },
+    cardMedia:{
+        width:160,
+    }
+});
 
 
 const PostCard = ({ post }) => {
@@ -27,8 +37,15 @@ const PostCard = ({ post }) => {
                             Continue Reading....
                         </Typography>
                     </div>
-
                     
+                    <Hidden xsDown> 
+                        <CardMedia 
+                            className={classes.cardMedia}
+                            image={post.image}
+                            title={post.imageTitle}
+                        />
+                    </Hidden>
+
                 </Card>
             </CardActionArea>
         </Grid>
