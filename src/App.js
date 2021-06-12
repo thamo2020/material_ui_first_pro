@@ -2,6 +2,7 @@
 import { Container, createMuiTheme, Grid, ThemeProvider,makeStyles } from '@material-ui/core';
 import './App.css';
 import FeaturedPost from './components/FeaturedPost';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Main from './components/Main';
 import PostCard from './components/PostCard';
@@ -48,6 +49,11 @@ const classes=useStyles();
               />
            </Grid>
        </Container>
+
+       <Footer
+         title="Footer"
+         description = "Something here to give the footer a purpose !"
+       />
   </ThemeProvider>
  
   )
