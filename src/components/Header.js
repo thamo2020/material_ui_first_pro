@@ -5,6 +5,7 @@ import { Typography } from '@material-ui/core';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import PersonIcon from '@material-ui/icons/Person';
 import { makeStyles } from '@material-ui/styles';
+import SideDrawer from './SideDrawer';
 //import classes from "*.module.css";
 // useStyle provide the solution for add css in material-ui
 
@@ -27,9 +28,11 @@ const Header = () => {
     return (
         <>
             <Toolbar>
-                <IconButton color="inherit">
-                    <MenuIcon />
-                </IconButton>
+            <SideDrawer>
+            <IconButton color="inherit">
+                <MenuIcon />
+            </IconButton>
+            </SideDrawer>
                     <Typography variant="h6" style={{color:'black'}} className={classes.title}>
                        Blogging website 
                     </Typography>
